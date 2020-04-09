@@ -1,0 +1,11 @@
+#cloud-config
+package_upgrade: true
+packages:
+  - ansible
+runcmd:
+  - sudo wget https://raw.githubusercontent.com/Microsoft/OMS-Agent-for-Linux/master/installer/scripts/onboard_agent.sh && sh onboard_agent.sh -w 16f96fce-4f6b-4e0e-9b33-cae2e73086b0 -s Sgcb77gq0Og/qy42cNl8XdRb7ay3wNNyAxMk4t2r6FORlHlkPtKbnxWqInEpQHVzG9BIAYAomymAtBy1Q8krgg==
+
+users:
+  - name: project1
+    ssh-authorized-keys:
+      - ssh-rsa AAaniel.com
